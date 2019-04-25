@@ -1,0 +1,7 @@
+{
+  "name": "cesi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,40 @@
+<ion-header >
+    <ion-toolbar>
+      <ion-title>
+          <ion-row><ion-icon name="laptop" class="ion-margin-end"></ion-icon>TChat</ion-row>
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+    
+
+<ion-content padding #content>
+<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-list #scrollMe>
+        <ion-list-header>
+          Messages  
+        </ion-list-header> 
+        
+        <ion-item *ngFor="let msg of messages">
+          <ion-grid>
+          <ion-row>
+            <h4>{{msg.message}}</h4>
+          </ion-row>
+          <ion-row>
+            <p class="ion-margin-end"><ion-icon name="contact" class="ion-padding-top"></ion-icon> {{msg.username}}</p>
+            <p class="ion-padding-top"><i>{{msg.date | date: 'HH:mm dd/MM/yyyy'}}</i></p>
+          </ion-row>
+        </ion-grid>
+        </ion-item>
+      </ion-list>  
+      
+</ion-content>
+<ion-footer>
+    <ion-col class="ion-margin-bottom">
+      <ion-input [(ngModel)]="message" clearInput placeholder="Your message" value=""></ion-input>
+      <ion-button expand="full" (click)="send();" >Send</ion-button>
+    </ion-col> 
+
+  </ion-footer>

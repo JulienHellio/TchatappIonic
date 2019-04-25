@@ -1,0 +1,22 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+  <ion-tabs *ngIf="isHomeRouteActivated()">
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="list-message"  [routerLink]="['/list-message']">
+            <ion-icon name="chatbubbles"></ion-icon>
+          <ion-label>Messages</ion-label>
+          <ion-badge></ion-badge>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="user" [routerLink]="['/user']">
+          <ion-icon name="contacts"></ion-icon>
+          <ion-label>Users</ion-label>
+        </ion-tab-button>
+        
+        <ion-tab-button tab="settings" [routerLink]="['/settings']">
+          <ion-icon name="ios-cog"></ion-icon>
+          <ion-label>settings</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+</ion-app>

@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+          <ion-row><ion-icon name="laptop" class="ion-margin-end"></ion-icon>App</ion-row>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    
+    <div class="ion-padding">
+        <h1><ion-row>Signup<ion-icon name="create" color="medium"></ion-icon></ion-row></h1>
+      <ion-item>
+        <ion-input [(ngModel)]="username" placeholder="Login"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-button expand="block" class="ion-margin-top" (click)="register();" color="light"><ion-ripple-effect></ion-ripple-effect>Signup <ion-icon name="create" color="medium"></ion-icon></ion-button>
+      <ion-button expand="block" class="ion-margin-top" [routerLink]="['/home']"><ion-ripple-effect></ion-ripple-effect>Signin <ion-icon name="log-in"></ion-icon></ion-button>
+    </div>
+  </ion-content>
